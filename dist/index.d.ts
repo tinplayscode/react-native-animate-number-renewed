@@ -1,5 +1,4 @@
-declare module 'react-native-animate-number' {
-  export interface IAnimateNumberProps {
+export interface Props {
     /**
      * The value of AnimateNumber component.
      */
@@ -25,7 +24,7 @@ declare module 'react-native-animate-number' {
     /**
      * This prop accepts a function which returns a string as displayed value.
      */
-    formatter?: (value: number) => string;
+    formatter?: (value: string) => string;
     /**
      * A function that triggers when text state has updated.
      * @param currentValue current frame's value
@@ -44,6 +43,8 @@ declare module 'react-native-animate-number' {
      * A value to start animation from. Default: `0`
      */
     initialValue?: number;
-  }
-  export default class AnimateNumber extends React.Component<IAnimateNumberProps> {}
 }
+
+declare const AnimateNumber: React.SFC<Props>
+
+export default AnimateNumber
